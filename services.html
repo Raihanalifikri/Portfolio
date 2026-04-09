@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Raii Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-transition-overlay" id="transition-overlay"></div>
+
+    <div id="main-container">
+        <aside id="sidebar">
+            <div class="logo">
+                <i class="fas fa-layer-group"></i> <span>Raii Portf.</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-address-card"></i> <span>Overview</span></a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-project-diagram"></i> <span>Portfolio</span></a></li>
+                    <li><a href="resume.html"><i class="fas fa-file-alt"></i> <span>Resume</span></a></li>
+                    <li><a href="services.html" class="active"><i class="fas fa-concierge-bell"></i>
+                            <span>Services</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+            </nav>
+            <a href="#" class="logout">
+                <p>&copy; 2026 ~ Raii Alifikri</p>
+            </a>
+        </aside>
+
+        <main id="main-content">
+            <header id="topbar">
+                <div class="digital-clock">
+                    <div class="clock-icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="time-wrapper">
+                        <span id="clock-time">00:00:00</span>
+                        <span id="clock-date">Thursday, 9 April 2026</span>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <div class="theme-toggle" id="theme-btn">
+                        <i class="fas fa-moon"></i> </div>
+                    <img src="image/1.jpeg" alt="Profile" class="profile-img-small">
+                </div>
+            </header>
+
+            <section class="services-section">
+                <h2 class="section-title">Layanan Digital</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-code"></i></div>
+                        <h3>Web Development</h3>
+                        <p>Pembuatan website responsif, cepat, dan modern menggunakan teknologi terbaru seperti React
+                            atau Google Apps Script untuk otomasi data.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Landing Page</li>
+                            <li><i class="fas fa-check"></i> E-Commerce Setup</li>
+                            <li><i class="fas fa-check"></i> Database Integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <p>Desain antarmuka yang ramah pengguna dengan fokus pada kemudahan navigasi dan estetika visual
+                            yang bersih.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> High-Fidelity Prototype</li>
+                            <li><i class="fas fa-check"></i> Wireframing</li>
+                            <li><i class="fas fa-check"></i> Design System</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-robot"></i></div>
+                        <h3>Workflow Automation</h3>
+                        <p>Optimalkan bisnis lu dengan mengintegrasikan Spreadsheet dan sistem pesan otomatis untuk
+                            efisiensi maksimal.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Email Auto-responder</li>
+                            <li><i class="fas fa-check"></i> Spreadsheet Automation</li>
+                            <li><i class="fas fa-check"></i> Custom API Connection</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

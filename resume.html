@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Raii Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-transition-overlay" id="transition-overlay"></div>
+
+    <div id="main-container">
+        <aside id="sidebar">
+            <div class="logo">
+                <i class="fas fa-layer-group"></i> <span>Raii Portf.</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-address-card"></i> <span>Overview</span></a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-project-diagram"></i> <span>Portfolio</span></a></li>
+                    <li><a href="resume.html" class="active"><i class="fas fa-file-alt"></i> <span>Resume</span></a>
+                    </li>
+                    <li><a href="services.html"><i class="fas fa-concierge-bell"></i> <span>Services</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+            </nav>
+            <a href="#" class="logout">
+                <p>&copy; 2026 ~ Raii Alifikri</p>
+            </a>
+        </aside>
+
+        <main id="main-content">
+            <header id="topbar">
+                <div class="digital-clock">
+                    <div class="clock-icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="time-wrapper">
+                        <span id="clock-time">00:00:00</span>
+                        <span id="clock-date">Thursday, 9 April 2026</span>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <button class="btn-download"><i class="fas fa-download"></i> Download CV</button>
+                    <div class="theme-toggle" id="theme-btn">
+                        <i class="fas fa-moon"></i> </div>
+                    <img src="image/1.jpeg" alt="Profile" class="profile-img-small">
+                </div>
+            </header>
+
+            <section class="resume-section">
+                <h2 class="section-title">Resume Digital</h2>
+
+                <div class="resume-grid">
+                    <div class="resume-left">
+                        <div class="resume-box">
+                            <h3 class="box-title"><i class="fas fa-graduation-cap"></i> Pendidikan</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="date">2026 - Sekarang</span>
+                                    <h4>S1 Teknik Informatika</h4>
+                                    <p>Universitas [Nama Kampus Lu]</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="date">2023 - 2026</span>
+                                    <h4>MIPA / Teknik</h4>
+                                    <p>[Nama SMA Lu]</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resume-box">
+                            <h3 class="box-title"><i class="fas fa-briefcase"></i> Pengalaman</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="date">2025 - Present</span>
+                                    <h4>Freelance Web Developer</h4>
+                                    <p>Membangun berbagai landing page dan otomasi spreadsheet untuk klien lokal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-right">
+                        <div class="resume-box">
+                            <h3 class="box-title"><i class="fas fa-tools"></i> Technical Skills</h3>
+                            <div class="skills-container">
+                                <div class="skill-tag">HTML5</div>
+                                <div class="skill-tag">CSS3</div>
+                                <div class="skill-tag">JavaScript</div>
+                                <div class="skill-tag">Google Apps Script</div>
+                                <div class="skill-tag">UI/UX Design</div>
+                                <div class="skill-tag">Figma</div>
+                            </div>
+                        </div>
+
+                        <div class="resume-box">
+                            <h3 class="box-title"><i class="fas fa-certificate"></i> Sertifikasi</h3>
+                            <ul class="cert-list">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Responsive Web Design - FreeCodeCamp</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Javascript Algorithms - Udemy</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

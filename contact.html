@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Raii Portf.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-transition-overlay" id="transition-overlay"></div>
+
+    <div id="status-overlay" class="status-overlay">
+        <div class="status-content">
+            <div id="status-icon-container"></div>
+            <p id="status-message"></p>
+            <button id="close-status" class="btn btn-outline"
+                style="display:none; margin-top:20px; width: auto;">Tutup</button>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <aside id="sidebar">
+            <div class="logo">
+                <i class="fas fa-layer-group"></i> <span>Raii Portf.</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-address-card"></i> <span>Overview</span></a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-project-diagram"></i> <span>Portfolio</span></a></li>
+                    <li><a href="resume.html"><i class="fas fa-file-alt"></i> <span>Resume</span></a></li>
+                    <li><a href="services.html"><i class="fas fa-concierge-bell"></i> <span>Services</span></a></li>
+                    <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> <span>Contact</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="logout">
+                <p>&copy; 2026 ~ Raii Alifikri</p>
+            </a>
+        </aside>
+
+        <main id="main-content">
+            <header id="topbar">
+                <div class="digital-clock">
+                    <div class="clock-icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="time-wrapper">
+                        <span id="clock-time">00:00:00</span>
+                        <span id="clock-date">Thursday, 9 April 2026</span>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <div class="theme-toggle" id="theme-btn">
+                        <i class="fas fa-moon"></i> </div>
+                    <img src="image/1.jpeg" alt="Profile" class="profile-img-small">
+                </div>
+            </header>
+
+            <section class="contact-section">
+                <h2 class="section-title">Mari Berkolaborasi</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <i class="fas fa-paper-plane"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>m.raihanalifikri@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+62 899-8150-108</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Lokasi</h4>
+                                <p>Bandung, Indonesia (Telkom University)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label>Nama Lengkap</label>
+                                <input type="text" name="name" id="name" placeholder="Masukkan nama lu..." required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" name="email" id="email" placeholder="email@contoh.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Pesan</label>
+                                <textarea name="message" id="message" rows="5"
+                                    placeholder="Apa yang bisa gua bantu, bre?" required></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="btn btn-blue">
+                                Kirim Pesan <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbyHq02LLwl1NnmCT5W4fHYY_a76toui5JBBif51aEFaFM0ELi62wGF1BYLzrsYqO9hleQ/exec';
+        const form = document.getElementById('contact-form');
+        const overlay = document.getElementById('status-overlay');
+        const iconContainer = document.getElementById('status-icon-container');
+        const statusMsg = document.getElementById('status-message');
+        const closeBtn = document.getElementById('close-status');
+
+        function showStatus(type) {
+            overlay.style.display = 'flex';
+            closeBtn.style.display = 'none';
+
+            if (type === 'loading') {
+                iconContainer.innerHTML = '<div class="status-spinner"></div>';
+                statusMsg.innerText = 'Tunggu bentar bre, lagi ngirim...';
+            } else if (type === 'success') {
+                iconContainer.innerHTML = '<i class="fas fa-check-circle status-icon icon-success"></i>';
+                statusMsg.innerText = 'Mantap bre! Pesan lu udah masuk.';
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 3000);
+            } else {
+                iconContainer.innerHTML = '<i class="fas fa-times-circle status-icon icon-error"></i>';
+                statusMsg.innerText = 'Waduh gagal bre, coba cek koneksi lu.';
+                closeBtn.style.display = 'inline-block';
+            }
+        }
+
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            showStatus('loading');
+
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    showStatus('success');
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    showStatus('error');
+                });
+        });
+    </script>
+</body>
+
+</html>

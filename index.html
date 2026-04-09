@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raii Store | Portfolio Elegan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="main-container">
+
+        <aside id="sidebar">
+            <div class="logo">
+                <i class="fas fa-layer-group"></i> <span>Raii Portf.</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-address-card"></i> <span>Overview</span></a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-project-diagram"></i> <span>Portfolio</span></a></li>
+                    <li><a href="resume.html"><i class="fas fa-file-alt"></i> <span>Resume</span></a></li>
+                    <li><a href="services.html"><i class="fas fa-concierge-bell"></i> <span>Services</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+            </nav>
+            <a href="#" class="logout">
+                <p>&copy; 2026 ~ Raii Alifikri</p>
+            </a>
+        </aside>
+
+        <main id="main-content">
+            <header id="topbar">
+                <div class="digital-clock">
+                    <div class="clock-icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="time-wrapper">
+                        <span id="clock-time">00:00:00</span>
+                        <span id="clock-date">Thursday, 9 April 2026</span>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <div class="theme-toggle" id="theme-btn">
+                        <i class="fas fa-moon"></i> </div>
+                    <img src="image/1.jpeg" alt="Profile" class="profile-img-small">
+                </div>
+            </header>
+
+            <section>
+                <h2 class="section-title">Portofolio Saya</h2>
+                <div class="content-grid">
+                    <div id="profile-card">
+                        <img src="image/1.jpeg" alt="Diri" class="profile-pic-large">
+                        <div class="profile-info">
+                            <div class="profile-header">
+                                <div>
+                                    <h1>Raii Alifikri</h1>
+                                    <p class="email">m.raihanalifikri@gmail.com</p>
+                                </div>
+                                <div class="social-icons-blue">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+
+                            <p class="profile-bio">
+                                Mahasiswa S1 Ilmu Terapan Sistem kota Cerdas <br>~ Telkom University ~
+                            </p>
+
+                            <div class="action-buttons">
+                                <button class="btn btn-blue"><a href="contact.html"
+                                        style="text-decoration: none;">Hubungi Saya</a></button>
+                                <button class="btn btn-outline"><a href="portfolio.html"
+                                        style="text-decoration: none;">Lihat Project</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="experience-section">
+                        <h3>Pengalaman Kerja</h3>
+                        <div class="exp-item">
+                            <div class="exp-icon"><i class="fas fa-laptop-code"></i></div>
+                            <div class="exp-details">
+                                <h4>Lead Frontend Developer</h4>
+                                <p class="company">TechGiant Solutions</p>
+                                <p class="date">2021 - Present</p>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="exp-details">
+                                <h4>UI/UX Designer</h4>
+                                <p class="company">Creative Studio</p>
+                                <p class="date">2018 - 2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="about-me-section">
+                        <h3>Tentang Saya</h3>
+                        <div class="about-content">
+                            <p>
+                                Halo! Nama saya <strong>Raihan Alifikri</strong>. Saat ini saya adalah mahasiswa S1 Ilmu
+                                Terapan Sistem Kota Cerdas di <strong>Telkom University</strong>. Saya memiliki
+                                ketertarikan mendalam dalam dunia pengembangan produk digital, mulai dari coding web
+                                hingga desain antarmuka yang minimalis.
+                            </p>
+                            <p>
+                                Fokus utama saya adalah menciptakan solusi digital yang tidak hanya fungsional, tetapi
+                                juga memiliki estetika yang bersih. Saya sering bereksperimen dengan alur kerja
+                                otomatisasi menggunakan spreadsheet dan sistem pesan untuk meningkatkan efisiensi
+                                operasional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+<div class="page-transition-overlay" id="transition-overlay"></div>
+<script src="script.js"></script>
+
+</html>
